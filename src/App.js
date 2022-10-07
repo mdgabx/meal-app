@@ -4,6 +4,8 @@ import Modals from "./components/Modals";
 import Search from "./components/Search";
 
 function App() {
+  
+
   return (
     <div className="App">
         <main className="container">

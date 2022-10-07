@@ -5,13 +5,16 @@ import './assets/styles.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
 // Bootstrap Bundle JS
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import { AppProvider } from './context';
 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+        <App />
+    </AppProvider> 
   </React.StrictMode>
 );
 
