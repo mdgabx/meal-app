@@ -1,21 +1,21 @@
 import { useGlobalContext } from "../context";
+import { FiThumbsUp } from 'react-icons/fi'; 
 
 const Meals = () => {
     const { meals } = useGlobalContext();
 
     return (
         <div className="container">
-            <div className="row justify-content-center w-100">
+            <div className="row justify-content-center align-items-stretch w-100">
                     <h2>Meal's Component</h2>
                     {  meals.map((meal) => {
                         console.log(meal);
                         return (
-                            <div key={meal.idMeal} className="card col-xs-12 col-sm-4 col-md-3 mx-3 my-3">
-                                <img className="card-img-top" src={meal.strMealThumb} alt={`${meal.name} image`}></img>
-                                <div className="card-body">
-                                    <h5 className="card-title">{meal.name}</h5>
-                                    <p className="card-text meal-description">{meal.strInstructions}</p>
-                                    <a href={meal.strSource} target="_blank" className="btn btn-primary">Source</a>
+                            <div key={meal.idMeal} className="card col-xs-12 col-sm-6 col-md-4 col-lg-3 my-2 mx-2">
+                                <img className="card-img-top" src={meal.strMealThumb} alt={`${meal.idMeal}`}></img>
+                                <div className="card-body meal-body">
+                                    <h5 className="card-title">{meal.strMeal}</h5>
+                                    <button className="btn btn-primary"><FiThumbsUp /></button>
                                 </div>
                             </div>
                         )

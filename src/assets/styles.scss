@@ -2,21 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,900;1,200;1,300;1,600;1,700;1,900&display=swap');
 
 //colors 
-$primary-color: #111;
-$secondary-color: #FFD700;
-$white: #ddd;
-$font: 'Source Sans Pro', sans-serif;
-$shadow: rgba(255, 255, 255, 0.2) 0px 30px 90px;
-$regularTextSize: 16px;
+$primary-color: #111 !important;
+$secondary-color: #FFD700 !important;
+$white: #ddd !important;
+$font: 'Source Sans Pro', sans-serif !important;
+$shadow: rgba(255, 255, 255, 0.2) 0px 30px 90px !important;
+$regularTextSize: 16px !important;
+$hoverShadow: rgba(255, 215, 0, 0.2) 0px 10px 10px !important;
+$unset: 0 !important;
+$none: none !important;
+$strongWeight: 700 !important;
+
 
 /* body */
 
 body {
-    font-family: $font !important;
-    font-size: $regularTextSize !important;
-    letter-spacing: 1px !important;
-    background-color: $primary-color !important;
-    color: $white !important;
+    font-family: $font;
+    font-size: $regularTextSize;
+    letter-spacing: 1px;
+    background-color: $primary-color;
+    color: $white;
 }
 
 /* search */
@@ -25,16 +30,44 @@ body {
 /* meals */
 
 .card {
-    margin: 0 I !important;
-    padding: 0 !important;
-    border: none !important;
-    box-shadow: $shadow !important;
-    color: $primary-color !important;
+    margin: $unset;
+    padding: $unset;
+    border: $none;
+    box-shadow: $shadow;
+    color: $primary-color;
+    max-width: 100%;
+    opacity: 0.8;
+
+    .meal-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+       
+        h5 {
+            font-weight: $strongWeight;
+            margin: $unset;
+            padding: $unset;
+        }   
+
+        .btn {
+            background: transparent;
+            border: transparent;
+            color: $primary-color;
+            font-weight: $strongWeight;
+        }
+    }
 }
 
-.meal-description {
-    text-overflow: ellipsis !important;
+.card:hover {
+    box-shadow: $hoverShadow;
+    opacity: 1;
+
+    .btn:hover {
+        color: $secondary-color;
+    }
 }
+
 
 
 
