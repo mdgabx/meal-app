@@ -1,17 +1,44 @@
 
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&display=swap');
-
-$font: "Lato", sans-serif !important;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,900;1,200;1,300;1,600;1,700;1,900&display=swap');
 
 //colors 
 $primary-color: #111;
 $secondary-color: #FFD700;
 $white: #ddd;
+$font: 'Source Sans Pro', sans-serif;
+$shadow: rgba(255, 255, 255, 0.2) 0px 30px 90px;
+$regularTextSize: 16px;
+
+/* body */
 
 body {
-    font-family: $font;
+    font-family: $font !important;
+    font-size: $regularTextSize !important;
+    letter-spacing: 1px !important;
+    background-color: $primary-color !important;
+    color: $white !important;
 }
+
+/* search */
+
+
+/* meals */
+
+.card {
+    margin: 0 I !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: $shadow !important;
+    color: $primary-color !important;
+}
+
+.meal-description {
+    text-overflow: ellipsis !important;
+}
+
+
+
+
 
 
 

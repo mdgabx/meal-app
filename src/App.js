@@ -9,14 +9,10 @@ function App() {
   return (
     <div className="App">
         <main className="container">
-          <div className="row">
-            <div className="col-8">
             { /*  <Search /> */ }
             { /*  <Favorites /> */ }
             <Meals />
             { /* <Modals /> */ }
-            </div>
-          </div>
         </main>
     </div>
   );
