@@ -27,21 +27,25 @@ const  AppProvider = ({children}) => {
         } catch (error) {
             console.log(error.response);
         }
+
+        setLoading(false);
     };
 
+    
+    const fetchRandomMeal = () => {
+        fetchMeal(randomMealUrl);
+    };
 
     useEffect(() => {
-        fetchMeal(`${allMealsUrl}${searchTerm}`);
-        setLoading(false);
+        if(searchTerm.length !== 0 ) {
+            fetchMeal(`${allMealsUrl}${searchTerm}`);
+        } else {
+            fetchMeal(allMealsUrl);
+        }
     }, [searchTerm]);
 
 
-    const fetchRandomMeal = () => {
-        fetchMeal(randomMealUrl);
-        setLoading(false);
-    };
-    
-    return <AppContext.Provider value={{meals, loading, setSearchTerm, fetchRandomMeal}}>
+    return <AppContext.Provider value={{ meals, loading, setSearchTerm, fetchRandomMeal }}>
         {children}
     </AppContext.Provider>
 }
