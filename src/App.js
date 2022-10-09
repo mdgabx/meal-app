@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div className="App">
-        <main className="container">
-            { /*  <Search /> */ }
+        <main className="container-fluid">
+              <Search />
             { /*  <Favorites /> */ }
             <Meals />
             { /* <Modals /> */ }

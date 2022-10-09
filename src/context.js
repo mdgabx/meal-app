@@ -12,20 +12,9 @@ const  AppProvider = ({children}) => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        //console.log('fetch data here');
-        // fetch 
-        // fetch('https://randomuser.me/api/')
-        //     .then((response) => response.json())
-        //     .then((data) => console.log(data.results));
-
-
 
         const fetchMeal = async (url) => {
             
-            // axios.get(allMealsUrl)
-            //     .then(data => {
-            //         console.log(data.data);
-            //     })
             setLoading(true);
 
             try {
@@ -39,8 +28,6 @@ const  AppProvider = ({children}) => {
             } catch (error) {
                 console.log(error.response);
             }
-
-
 
             // try {
             //     const response = await fetch('https://randomuser.me/api/');

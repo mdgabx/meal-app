@@ -7,7 +7,6 @@ const Meals = () => {
     return (
         <div className="container">
             <div className="row justify-content-center align-items-stretch w-100">
-                    <h2>Meal's Component</h2>
                     {
                          loading === true ? 
                          (  <h4 className="info-text justify-content-center">Loading...</h4> )  : 

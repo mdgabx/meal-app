@@ -24,8 +24,44 @@ body {
     color: $white;
 }
 
-/* search */
+/* main */
 
+main {
+    padding: $unset;
+    margin: $unset;
+}
+
+/* search */
+.search-container {
+    background: linear-gradient(180deg, #FFD400, #F98A2C);
+    box-shadow: $shadow;
+
+    .search-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        padding: 1.1em 3em;
+        margin: $unset;
+        width: 60%;
+
+        input {
+            margin-right: 16px;
+        }
+
+        button {
+            width: 250px;
+            background-color: #402852;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #633663;
+        }
+
+    }
+
+}
 
 /* meals */
 
@@ -80,7 +116,43 @@ body {
 
 
 
+/* media queries */
+@media screen and (min-width: 1800px) {
 
+    .search-form {
+        width: 40% !important;
+    }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
+    .search-form {
+        width: 80% !important;
+    }
+}
+
+
+
+@media screen and (max-width: 762px) {
+
+    .search-form {
+        align-items: flex-start !important;
+        justify-content: flex-start;
+        flex-direction: column !important;
+        width: 100% !important;
+
+        input {
+            margin-bottom: 12px !important;
+        }
+
+        button {
+            margin: 6px 0 !important;
+            width: 100% !important;
+        }
+    }
+}
 
 
 
