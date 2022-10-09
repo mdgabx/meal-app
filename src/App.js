@@ -14,7 +14,7 @@ function App() {
             <Search />
             { /*  <Favorites /> */ }
             <Meals />
-            { !showModal && <Modals /> }
+            { showModal && <Modals /> }
         </main>
     </div>
   );

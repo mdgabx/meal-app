@@ -8,7 +8,11 @@ const Meals = () => {
             <div className="row">
               { /*  Modal*/  }
                <div className="modal-overlay">
-                    
+                    <div className="modal-body">
+                        <div className="modal-card">
+
+                        </div>
+                    </div>
                </div>
             </div>
         </div>

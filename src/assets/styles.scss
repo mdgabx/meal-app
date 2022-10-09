@@ -121,6 +121,24 @@ main {
     width: 100% !important;
     height: 100% !important;
     background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-body {
+        height: 300px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+
+       .modal-card {
+        background: $white;
+        height: 300px;
+        width: 600px;
+        border-radius: 15px;
+       }
+    }
+
 }
 
 
