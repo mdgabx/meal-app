@@ -1,10 +1,15 @@
+import React, { useState } from "react";
+import { useGlobalContext } from "../context";
+
 const Meals = () => {
+
     return ( 
-        <div className="container">
+        <div className="container-fluid modal-con">
             <div className="row">
-                <div className="col-8">
-                    <h2>Modals component</h2>
-                </div>
+              { /*  Modal*/  }
+               <div className="modal-overlay">
+                    
+               </div>
             </div>
         </div>
      );

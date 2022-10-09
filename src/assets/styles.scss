@@ -111,6 +111,19 @@ main {
 }
 
 
+/* modal */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0,0,0,0.9);
+}
+
+
 /* media queries */
 @media screen and (min-width: 1800px) {
 
