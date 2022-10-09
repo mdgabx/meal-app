@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "../context";
 
 const Search = () => {
-    const context = useGlobalContext();
+    const { setSearchTerm, fetchRandomMeal } = useGlobalContext();
+    const [text,setText] = useState("");
+
+    const handleOnChange = (event) => {
+        setText(event.target.value);
+    };
+
+    const handleOnSubmit = (event) => {
+        event.preventDefault();
+        if(text) {
+            setSearchTerm(text);
+        }
+    };
 
     return ( 
         <header className="container-fluid search-container py-4 mb-4">
             <div className="row">
                 <div className="col-12"> 
-                    <form className="form-inline search-form">
-                        <input className="form-control" type="text" placeholder="Search a Meal" aria-label="Search" />
+                    <form className="form-inline search-form" onSubmit={handleOnSubmit}>
+                        <input className="form-control" type="text" placeholder="Search a Meal" value={text} aria-label="Search" onChange={handleOnChange}/>
                         <button className="btn btn-primary mx-2" type="submit">Search</button>
-                        <button className="btn btn-primary mx-2">Random Meal</button>
+                        <button className="btn btn-primary mx-2" onClick={fetchRandomMeal} >Random Meal</button>
                     </form>
                 </div>
             </div>
