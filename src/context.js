@@ -31,11 +31,6 @@ const  AppProvider = ({children}) => {
         setLoading(false);
     };
 
-    const fetchRandomMeal = () => {
-        fetchMeal(randomMealUrl);
-    };    
-
-
     useEffect(() => {
         fetchMeal(allMealsUrl);
     }, [])
@@ -44,6 +39,10 @@ const  AppProvider = ({children}) => {
         if(!searchTerm ) return
         fetchMeal(`${allMealsUrl}${searchTerm}`);
     }, [searchTerm]);
+
+    const fetchRandomMeal = () => {
+        fetchMeal(randomMealUrl);
+    };    
     
 
 
