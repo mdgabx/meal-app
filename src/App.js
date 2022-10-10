@@ -7,7 +7,6 @@ import { useGlobalContext } from "./context";
 function App() {
   const { showModal } = useGlobalContext();
 
-
   return (
     <div className="App">
         <main className="container-fluid">
