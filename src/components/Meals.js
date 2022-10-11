@@ -2,7 +2,7 @@ import { useGlobalContext } from "../context";
 import { FiThumbsUp } from 'react-icons/fi'; 
 
 const Meals = () => {
-    const { meals, loading, selectMeal } = useGlobalContext();
+    const { meals, loading, selectMeal, addToFavorites } = useGlobalContext();
 
     return (
         <div className="container">
@@ -15,7 +15,7 @@ const Meals = () => {
                                             <img className="card-img-top" src={meal.strMealThumb} alt={`${meal.idMeal}`}  onClick={() => selectMeal(meal.idMeal)} ></img>
                                             <div className="card-body meal-body">
                                                 <h5 className="card-title">{meal.strMeal}</h5>
-                                                <button className="btn btn-primary"><FiThumbsUp /></button>
+                                                <button className="btn btn-primary" onClick={() => addToFavorites(meal.idMeal)}><FiThumbsUp /></button>
                                             </div>
                                         </div>
                                 )

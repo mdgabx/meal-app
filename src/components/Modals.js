@@ -12,6 +12,7 @@ const Meals = () => {
                     <div className="modal-body">
                         <div className="modal-card">
                             <img src={meal.strMealThumb} alt={"meal" + `${meal.strMeal}`}></img>
+                            <h5>Cooking Instructions:</h5>
                             <p>{meal.strInstructions}</p>
                             <a href={meal.strSource} target="_blank">Source here</a>
                             <button className="btn btn-button close-btn" onClick={handleCloseModal}>Close</button>

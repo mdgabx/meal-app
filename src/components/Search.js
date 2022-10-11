@@ -23,7 +23,7 @@ const Search = () => {
     };
 
     return ( 
-        <header className="container-fluid search-container py-4 mb-4">
+        <header className="container-fluid search-container py-4">
             <div className="row">
                 <div className="col-12"> 
                     <form className="form-inline search-form" onSubmit={handleOnSubmit}>

@@ -5,13 +5,13 @@ import Search from "./components/Search";
 import { useGlobalContext } from "./context";
 
 function App() {
-  const { showModal } = useGlobalContext();
+  const { showModal, favorites } = useGlobalContext();
 
   return (
     <div className="App">
         <main className="container-fluid">
             <Search />
-            { /*  <Favorites /> */ }
+            { favorites.length > 0 && <Favorites />  }
             <Meals />
             { showModal && <Modals /> }
         </main>
