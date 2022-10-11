@@ -159,8 +159,7 @@ main {
         justify-content: flex-start;
         flex-direction: column;
         padding-bottom: 20px;
-
-       
+        position: relative;
 
             img {
                 width: 100%;
@@ -180,9 +179,13 @@ main {
             }
         
             .close-btn {
-                background-color: red;
+                color: red;
+                font-size: 32px;
                 margin-left: 20px;
                 color: #fff;
+                position: absolute;
+                top: 0;
+                right: 0;
             }
 
             .close-btn:hover {
@@ -196,7 +199,8 @@ main {
 /* favorites */
 
 .fav-con {
-    background-color: $primary-color;
+    background-color: #1e1e1e;
+    box-shadow: 0px 0px 100px 10px rgba(255,255,255, 0.2);
 
     .favorite-con {
         display: flex;
@@ -215,6 +219,7 @@ main {
                     border-radius: 50%;
                     margin: 1px;
                     opacity: 0.7;
+                    cursor: pointer;
                 }
                 
                 button {
@@ -268,6 +273,10 @@ main {
             margin: 6px 0 !important;
             width: 100% !important;
         }
+    }
+
+    .modal-card {
+        width: 80% !important;
     }
 }
 

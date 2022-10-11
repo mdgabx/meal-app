@@ -13,8 +13,7 @@ const  AppProvider = ({children}) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [showModal, setShowModal] = useState(false);
     const [selectedMeal, setSelectedMeal] = useState(null);
-    const [favorites, setFavorites] = useState([]);
-
+    const [favorites, setFavorites] = useState(localStorage.getItem('favorites') !== undefined ? JSON.parse(localStorage.getItem('favorites')) : []);
 
     const fetchMeal = async (url) => {
         setLoading(true);
@@ -38,11 +37,18 @@ const  AppProvider = ({children}) => {
         fetchMeal(randomMealUrl);
     };  
 
+
+
     const selectMeal = (idMeal, favoriteMeal) => {
 
         let meal;
+
+        if(favoriteMeal) {
+            meal = favorites.find((meal) => meal.idMeal === idMeal);
+        } else {
+            meal = meals.find((meal) => meal.idMeal === idMeal);
+        }
         
-        meal = meals.find((meal) => meal.idMeal === idMeal);
         setSelectedMeal(meal);
         setShowModal(true);
     };
@@ -63,6 +69,7 @@ const  AppProvider = ({children}) => {
 
         const updateFavorites = [...favorites, meal];
         setFavorites(updateFavorites);
+        localStorage.setItem("favorites", JSON.stringify(updateFavorites));
     };
 
     const removeFromFavorites = (idMeal) => {
@@ -71,7 +78,7 @@ const  AppProvider = ({children}) => {
         });
 
         setFavorites(updateFavorites);
-
+        localStorage.setItem("favorites", JSON.stringify(updateFavorites));
     };
 
 

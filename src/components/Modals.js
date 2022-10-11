@@ -15,7 +15,7 @@ const Meals = () => {
                             <h5>Cooking Instructions:</h5>
                             <p>{meal.strInstructions}</p>
                             <a href={meal.strSource} target="_blank">Source here</a>
-                            <button className="btn btn-button close-btn" onClick={handleCloseModal}>Close</button>
+                            <button className="btn btn-button close-btn" onClick={handleCloseModal}>&times;</button>
                         </div>
                     </div>
                </div>
