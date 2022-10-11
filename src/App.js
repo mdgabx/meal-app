@@ -11,7 +11,7 @@ function App() {
     <div className="App">
         <main className="container-fluid">
             <Search />
-            { favorites.length > 0 && <Favorites />  }
+            { favorites.length !== 0 && <Favorites />  }
             <Meals />
             { showModal && <Modals /> }
         </main>

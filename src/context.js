@@ -13,7 +13,21 @@ const  AppProvider = ({children}) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [showModal, setShowModal] = useState(false);
     const [selectedMeal, setSelectedMeal] = useState(null);
-    const [favorites, setFavorites] = useState(localStorage.getItem('favorites') !== undefined ? JSON.parse(localStorage.getItem('favorites')) : []);
+    
+    const getStorageFavorites = () => {
+        let favorite = localStorage.getItem('favorites');
+
+        if(favorite) {
+            favorite = JSON.parse(localStorage.getItem('favorites'));
+        } else {
+            favorite = [];
+        }
+
+        return favorite;
+    };
+
+    const [favorites, setFavorites] = useState(getStorageFavorites());
+
 
     const fetchMeal = async (url) => {
         setLoading(true);
